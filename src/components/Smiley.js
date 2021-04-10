@@ -6,8 +6,6 @@ import Svg from '../common/Svg'
 
 const width = 460
 const height = 460
-const centerX = height / 2
-const centerY = width / 2
 const radius = 120
 const eyeCircle = 20
 const offsetX = 40
@@ -23,7 +21,7 @@ const mouth = arc()
 const smiley = () => {
   return (
     <Svg width={width} height={height}>
-      <g transform={`translate(${centerX}, ${centerY})`}>
+      <g transform={`translate(${height / 2}, ${width / 2})`}>
         <Circle
           r={radius - strokeWidth / 2}
           stroke='black'
