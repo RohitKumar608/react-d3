@@ -1,5 +1,8 @@
 import React from 'react'
 import { arc } from 'd3'
+import Path from '../common/Path'
+import Circle from '../common/Circle'
+import Svg from '../common/Svg'
 
 const width = 460
 const height = 460
@@ -17,27 +20,21 @@ const mouth = arc()
   .startAngle(Math.PI / 2)
   .endAngle(Math.PI * 1.5)
 
-const eyeBrow = arc()
-  .innerRadius(0)
-  .outerRadius(40)
-  .startAngle(Math.PI / 4)
-  .endAngle(Math.PI * 0.3)
-
 const smiley = () => {
   return (
-    <svg width={width} height={height}>
+    <Svg width={width} height={height}>
       <g transform={`translate(${centerX}, ${centerY})`}>
-        <circle
+        <Circle
           r={radius - strokeWidth / 2}
           stroke='black'
           strokeWidth={strokeWidth}
           fill='yellow'
         />
-        <circle cx={-offsetX} cy={-offsetY} r={eyeCircle} stroke='black' />
-        <circle cx={offsetX} cy={-offsetY} r={eyeCircle} stroke='black' />
-        <path d={mouth()} />
+        <Circle cx={-offsetX} cy={-offsetY} r={eyeCircle} stroke='black' />
+        <Circle cx={offsetX} cy={-offsetY} r={eyeCircle} stroke='black' />
+        <Path d={mouth} />
       </g>
-    </svg>
+    </Svg>
   )
 }
 

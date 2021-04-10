@@ -1,4 +1,4 @@
-import Smiley from './src/Smiley'
+import Smiley from './components/Smiley'
 import './App.css'
 
 function App() {
