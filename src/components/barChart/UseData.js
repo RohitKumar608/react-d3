@@ -13,7 +13,7 @@ export const useData = () => {
       return d
     }
     csv(csvUrl, row).then((data) => {
-      setData(data.slice(0, 10))
+      setData(data.slice(0, 30))
     })
   }, [])
 

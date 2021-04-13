@@ -5,8 +5,8 @@ import { AxisBottom } from './barChart/AxisBottom'
 import { AxisLeft } from './barChart/AxisLeft'
 import { Marks } from './barChart/Marks'
 
-const width = 960
-const height = 500
+const width = 1100
+const height = 700
 const margin = { top: 20, right: 30, bottom: 65, left: 220 }
 const xAxisLabelOffset = 50
 
