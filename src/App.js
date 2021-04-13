@@ -1,12 +1,12 @@
 // import Smiley from './components/Smiley'
 // import MouseMovement from './components/MouseMovement'
-import PieChart from './components/PieChart'
+import BarChart from './components/BarChart'
 import './App.css'
 
 function App() {
   return (
     <div className='App'>
-      <PieChart />
+      <BarChart />
     </div>
   )
 }

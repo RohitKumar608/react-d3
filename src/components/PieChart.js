@@ -24,7 +24,7 @@ const PieChart = () => {
       <Svg width={width} height={height}>
         <g transform={`translate(${centerX}, ${centerY})`}>
           {colorPie(data).map((d, idx) => (
-            <path fill={d.data['RGB hex value']} d={pieArc(d)} />
+            <path key={idx} fill={d.data['RGB hex value']} d={pieArc(d)} />
           ))}
         </g>
       </Svg>
